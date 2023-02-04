@@ -9,16 +9,53 @@ body {
     letter-spacing: -.003em;
 }
 
+/* img {
+    width: 40%;
+    height: 40%;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   border:5px solid rgb(0, 0, 0);
+   margin-bottom: 3em;
+} */
 
+img{
+    width: 40%;
+    height: 40%;
+    margin-left: auto;
+   margin-right: auto;
+   display: block;
+   border:5px solid rgb(0, 0, 0);
 
-p {
-    padding-left: 7em;
-    padding-right: 12em;
-    text-indent: 50px;
 }
 
+figcaption{
+    text-align: center;
+    
+}
+
+
+
+
+p{
+    text-indent: 50px;;
+}
+.analysis{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    max-width: 40em;
+    /* border:1px solid red; */
+    padding:25px;
+    margin:auto;
+    background-color: rgb(254, 254, 254);
+   
+    
+    
+}
+
+
 h3{
-    padding-left: 3em;
+    padding-left: 2em;
 }
 
 h1{
