@@ -9,17 +9,48 @@ body {
     letter-spacing: -.003em;
 }
 
-/* img {
-    width: 40%;
-    height: 40%;
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
-   border:5px solid rgb(0, 0, 0);
-   margin-bottom: 3em;
-} */
 
-img{
+
+
+.photo-container{
+    display:flex;
+    flex-direction: row;
+    gap:50px;
+}
+
+.memex{
+    width:80%;
+    height:80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border:5px solid rgb(0, 0, 0);
+    
+   
+}
+
+.memex:hover{
+    transform: scale(1.5);
+    transition:  1.2s;
+    
+}
+
+.modernComputer{
+    width:80%;
+    height:80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border:5px solid rgb(0, 0, 0);
+}
+
+.modernComputer:hover{
+    transform: scale(1.5);
+    transition:  1.2s;
+   
+}
+
+.bush{
     width: 40%;
     height: 40%;
     margin-left: auto;
@@ -27,6 +58,11 @@ img{
    display: block;
    border:5px solid rgb(0, 0, 0);
 
+}
+
+.bush:hover{
+    transform: scale(1.15);
+    transition:  1.2s;
 }
 
 figcaption{
@@ -39,6 +75,7 @@ figcaption{
 
 p{
     text-indent: 50px;;
+    
 }
 .analysis{
     display: grid;
