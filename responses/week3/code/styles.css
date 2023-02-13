@@ -49,6 +49,22 @@ h1{
 
 }
 
+.box:hover .image1{
+    transform: scale(2) translate(0px, 100px);
+    transition: 1s;
+   
+}
+.box:hover .image2{
+    transform: scale(2) translate(0px, 100px);
+    transition: 1s;
+   
+}
+.box:hover .image3{
+    transform: scale(2) translate(0px, 100px);
+    transition: 1s;
+   
+}
+
 .title{
    
     color: #000000;
@@ -115,12 +131,7 @@ h1{
     
 }
 
-.image1:hover{
-    transform: scale(2) translate(0px, 100px);
-    transition: 1s;
-   
-   
-}
+
 
 .image2{
     width:13em;
@@ -128,12 +139,7 @@ h1{
     
 }
 
-.image2:hover{
-    transform: scale(2) translate(-180px, 0px);
-    transition: 1s;
-   
-   
-}
+
 
 .image3{
     width:13em;
@@ -141,11 +147,7 @@ h1{
     
 }
 
-.image3:hover{
-    transform: scale(2) translate(180px, -130px);
-    transition: 1s;
-   
-}
+
 
 .quote1{
     font-family: 'Poppins', sans-serif;
