@@ -2,8 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Frijole&family=Montserrat:wght@200;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Frijole&family=Montserrat:wght@200;400;600&family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Frijole&family=Montserrat:wght@200;400;600&family=Poppins:wght@300;600&family=Shadows+Into+Light&display=swap');
+
+
 body{
-   background-color:rgb(253, 253, 232);
+   background-color:D7E9B9;
 }
 
 h1{
@@ -20,7 +23,7 @@ h1{
 
 
 #container{
-    background-color: rgba(152, 152, 152, 0.523);
+    background-color: rgba(152, 152, 152, 0.347);
     display: grid;
     /* border:2px solid rgb(1, 87, 163); */
     padding:3em;
@@ -38,6 +41,12 @@ h1{
     justify-content: center;
     align-items: center;
    
+}
+
+.box:hover{
+    background-color:FFFBAC;
+    transition:0.4s;
+
 }
 
 .title{
@@ -136,7 +145,6 @@ h1{
     transform: scale(2) translate(180px, -130px);
     transition: 1s;
    
-   
 }
 
 .quote1{
@@ -146,9 +154,6 @@ h1{
     border:hidden;
     
 }
-
-
-
 
 
 
@@ -165,8 +170,8 @@ h1{
 }
 
 .quote:hover .highlight{
-    background-color:rgb(238, 255, 0);
-    transition:0.8s;
+    background-color:FFD495;
+    transition:1.2s;
 }
 
 .type{
@@ -178,14 +183,28 @@ h1{
 
 }
 
-
-
+#click1{
+     font-family: 'Shadows Into Light', cursive;
+     font-size:5em;
+     color:rgb(0, 0, 0);
+}
+#click2{
+    font-family: 'Shadows Into Light', cursive;
+    font-size:5em;
+    color:rgb(0, 0, 0);
+}
+#click3{
+    font-family: 'Shadows Into Light', cursive;
+    font-size:5em;
+    color:rgb(0, 0, 0);
+}
 
 
 @keyframes typing {
     from { width: 0 }
     to { width: 100%; }
   }
+
 
 
 

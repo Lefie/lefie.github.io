@@ -18,10 +18,13 @@
             </figure>
         </div>
         <div class="box quote hidden ">
-            <strong>"All are elements of the same culture, our culture. Yet, between each page, there's such a fissure, such a disconnection, such incoherence,that one can only say this culture is mad. <span class="highlight">On pages like these,reality itself becomes unrecognizable."</strong></span>
-            
+          <div id="click1" onClick="typeWriter1(); ">click me</div>
+            <p id="sentence1"></p>
         </div>
-        <div class="box quote"><strong>"<span class="highlight">Publicity both promises and threatens.</span> Often the fear of not being desirable, of being unenviable. It suggests that you are inadequate as you are, but it consoles you with the promise of a dream."</strong> </div>
+        <div class="box quote">
+            <div id="click2" onClick="typeWriter2(); ">click me</div>
+            <p id="sentence2"></p>
+        </div>
         <div class="box title float">Of</div>
         <div class="box">
             <figure>
@@ -34,13 +37,98 @@
                 <img class="image3" src="../img/mechanicalEye.png" alt="screenshot2">
                 </figure>
         </div>
-        <div class="box quote"><strong>"<span class="highlight">Freed from the boundaries of time and space,</span> I coordinate any and all points of the universe wherever I want them to be." </strong></div>
+        <div class="box quote">
+            <div id="click3" onClick="typeWriter3(); ">click me</div>
+            <p id="sentence3"></p>
+        </div>
         <div class="box title spin2">Seeing</div>  
       </div>
     </div>
 
 
+<script>
+    let i = 0;
+    let j = 0;
+    let x = 0;
+    const text1 = '"All are elements of the same culture, our culture. Yet, between each page, there is such a fissure, such a disconnection, such incoherence,that one can only say this culture is mad. On pages like these,reality itself becomes unrecognizable. "' 
+    const highlightText1="On pages like these,reality itself becomes unrecognizable.";
+    
+    const text2='"Publicity both promises and threatens. Often the fear of not being desirable, of being unenviable. It suggests that you are inadequate as you are, but it consoles you with the promise of a dream."'
+    const highlightText2="Publicity both promises and threatens."
 
+    const text3='"Freed from the boundaries of time and space, I coordinate any and all points of the universe wherever I want them to be."'
+    const highlightText3="Freed from the boundaries of time and space,"
+
+    function typeWriter1(){
+       
+
+       const sentenceEle = document.getElementById("sentence1");
+      
+       document.getElementById("click1").style.display = "none";
+
+       //add to sentenceEle
+       if(i < text1.length){
+           document.getElementById("sentence1").innerHTML +=text1.charAt(i);
+           i++;
+           setTimeout(typeWriter1,80);
+       }
+       sentenceEle.style.fontWeight = "900";
+       highlighting(highlightText1,"sentence1");
+       
+   }
+
+
+    function typeWriter2(){
+       
+
+       const sentenceEle = document.getElementById("sentence2");
+      
+       document.getElementById("click2").style.display = "none";
+
+       //add to sentenceEle
+       if(j < text2.length){
+           document.getElementById("sentence2").innerHTML +=text2.charAt(j);
+           j++;
+           setTimeout(typeWriter2,80);
+       }
+       sentenceEle.style.fontWeight = "900";
+       highlighting(highlightText2,"sentence2");
+       
+   }
+
+   function typeWriter3(){
+       
+
+       const sentenceEle = document.getElementById("sentence3");
+      
+       document.getElementById("click3").style.display = "none";
+
+       //add to sentenceEle
+       if(x < text3.length){
+           document.getElementById("sentence3").innerHTML +=text3.charAt(x);
+           x++;
+           setTimeout(typeWriter3,80);
+       }
+       sentenceEle.style.fontWeight = "900";
+       highlighting(highlightText3,"sentence3");
+       
+   }
+
+    function highlighting(txt,idName){
+
+        const sentenceEle = document.getElementById(idName);
+        let innerText = sentenceEle.innerHTML;
+        console.log("inner text of sentence ele: ",sentenceEle.innerHTML);
+
+        let index = innerText.indexOf(txt);
+        if (index >= 0) { 
+          innerText = innerText.substring(0,index) + "<span class='highlight'>" + innerText.substring(index,index+txt.length) + "</span>" + innerText.substring(index + txt.length);
+          sentenceEle.innerHTML = innerText;
+        }
+        
+    }
+    
+</script>
 
 </body>
 </html>
