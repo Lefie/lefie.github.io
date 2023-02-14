@@ -9,6 +9,11 @@ body{
    background-color:D7E9B9;
 }
 
+/*  
+
+reference code :
+https://blog.hubspot.com/website/typing-animation-css
+*/
 h1{
     font-family: 'Frijole', cursive;
     font-size:2em;
@@ -96,6 +101,13 @@ h1{
     animation-timing-function:linear;
 }
 
+/*
+
+reference code for rotating back and forth:
+https://codepen.io/sstromick/pen/KKwQbrx
+
+*/
+
 @keyframes spin1 { 
     0%{transform: rotate(0deg); }
     25%{transform: rotate(9deg); }
@@ -131,11 +143,7 @@ h1{
     
 }
 
-/* .image1:hover{
-    transform: scale(2) translate(0px, 100px);
-    transition: 1s;
-   
-} */
+
 
 .image2{
     width:13em;
@@ -143,12 +151,7 @@ h1{
     
 }
 
-/* .image2:hover{
-    transform: scale(2) translate(-180px, 0px);
-    transition: 1s;
-   
-   
-} */
+
 
 .image3{
     width:13em;
@@ -156,11 +159,7 @@ h1{
     
 }
 
-/* .image3:hover{
-    transform: scale(2) translate(180px, -130px);
-    transition: 1s;
-   
-} */
+
 
 .quote1{
     font-family: 'Poppins', sans-serif;
