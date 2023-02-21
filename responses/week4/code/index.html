@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Response to Sharif </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="super
+    ">
+    <div class="title">Response</div>
+<div class="container-3">
+    
+    <div class="figures">
+        <div class="box" id="box1">
+        <figure>
+            <img src="https://www.thearmorylife.com/wp-content/uploads/2021/04/article-blast-from-the-past-history-of-the-bazooka-4.jpg" alt="image1" width="250vh">
+        </figure>
+        <figcaption>
+            your whole body in a photo<br/>
+            your whole body<br/>
+            sitting on a crate<br/>
+            pressing your eyesocket<br/>
+            to the viewfinder<br/>
+            of a bazooka
+        </figcaption>
+      </div>
+
+      <div class="box" id="box2" >
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Iranian_Martyrs_Museum_08.JPG" alt="image1" width="200vh">
+            
+        </figure>
+        <figcaption>They are building a museum<br/>
+            for the martyrs.<br/>
+            Some metal shelf<br/>
+            a white archival box<br/>
+            with his personal effects.</figcaption>
+      </div>
+      <div class="box" id="box3">
+        <figure>
+            <img src="https://i0.wp.com/nursingclio.org/wp-content/uploads/2018/03/grief-LOC.jpg?fit=702%2C718&ssl=1" alt="image1" width="200vh">
+           
+        </figure>
+        <figcaption>His mother's bed.<br/>
+            A grief we don't attempt to console.</figcaption>
+        </div>
+        <div class="box" id="box4">
+        <figure>
+            <img src="https://static01.nyt.com/images/2020/02/14/us/politics/14xp-letters/14xp-letters-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="image1" width="150vh">
+        <figcaption>In one letter,<br/>
+            you name the seventh killed<br/>
+            in your company<br/>
+            
+            <em>Well maybe I am next.</em><br/>
+            You didn't say much else</div></figcaption>
+      
+        </div>
+    </div>
+
+
+
+</div>
+
+<div class="arrow">
+    <a href="page3.html" >&#10094;</a>
+    <a href="page2.html">&#10095;</a>
+</div>
+
+</div>
+
+<script>
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+    const box3 = document.getElementById("box3");
+    const box4 = document.getElementById("box4");
+   
+    const container = document.getElementsByClassName("container-3")[0];
+    box1.addEventListener("mouseover",function(){
+        if(container.classList.contains("backgroundColor2")){
+            container.classList.remove("backgroundColor2");
+        }
+        if(container.classList.contains("backgroundColor3")){
+            container.classList.remove("backgroundColor3");
+        }
+        if(container.classList.contains("backgroundColor4")){
+            container.classList.remove("backgroundColor4");
+        }
+
+      
+        container.classList.add("backgroundColor1");
+       
+
+       
+    })
+
+    box2.addEventListener("mouseover",function(){
+        if(container.classList.contains("backgroundColor1")){
+            container.classList.remove("backgroundColor1");
+        }
+        if(container.classList.contains("backgroundColor3")){
+            container.classList.remove("backgroundColor3");
+        }
+        if(container.classList.contains("backgroundColor4")){
+            container.classList.remove("backgroundColor4");
+        }
+        container.classList.add("backgroundColor2");
+       
+    })
+
+    box3.addEventListener("mouseover",function(){
+        if(container.classList.contains("backgroundColor1")){
+            container.classList.remove("backgroundColor1");
+        }
+        if(container.classList.contains("backgroundColor2")){
+            container.classList.remove("backgroundColor2");
+        }
+        if(container.classList.contains("backgroundColor4")){
+            container.classList.remove("backgroundColor4");
+        }
+        container.classList.add("backgroundColor3");
+       
+    })
+
+    box4.addEventListener("mouseover",function(){
+        if(container.classList.contains("backgroundColor1")){
+            container.classList.remove("backgroundColor1");
+        }
+        if(container.classList.contains("backgroundColor3")){
+            container.classList.remove("backgroundColor3");
+        }
+        if(container.classList.contains("backgroundColor2")){
+            container.classList.remove("backgroundColor2");
+        }
+        container.classList.add("backgroundColor4");
+       
+    })
+
+
+</script>
+   
+</body>
+
+</html>

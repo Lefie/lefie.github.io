@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Response to Sharif </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="superContainer">
+<div class="container-2">
+
+    <div class="title">Iran-Iraq War</div>
+
+    <div class="mySlides fade">
+       
+        <img id="img1" src="https://cdn.britannica.com/59/196359-050-2CDDC13A/forces-Iraqi-rocket-launchers-outskirts-Khorramshahr-Iran-October-1980.jpg" alt="image1" style="width:100%">
+        <div id="one" class="text"> Iran Iraq War was fought between Iran and Iraq and lasted from 1980 to 1988.The war began when Iraq invaded Iran. Some causes included territorial, religious and political dispute.The conflict resulted in significant loss of life, with an estimate of up to a million people killed on both sides.
+        </div>
+    </div>
+    
+    <div class="mySlides fade">
+        <img id="img2" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1393/07/02/139307021325221523702374.jpg" alt="image2" style="width:100%">
+        <div class="text">Operation Ramadan was a major offensive launched by Iran against Iraq during the Iran-Iraq War. It began on July 13, 1982, and was intended to break the stalemate that had characterized the conflict up to that point.It marked the first large-scale offensive by Iran against Iraq and demonstrated the Iranian military's growing capabilities. It also highlighted the brutality of the Iran-Iraq War, with both sides using chemical weapons and engaging in massive, destructive battles.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <img id="img3" src="https://historydraft.com/files/7eaf206a-4cde-4165-ba4d-19680cb0f618" alt="image2" style="width:100%">
+        <div class="text">Operation Nasr (also known as Tariq al-Qods) was a military operation launched by Iraq during the Iran-Iraq War. It began on April 5, 1987, and was intended to recapture the city of Basra from Iranian forces, who had been occupying the city since 1982.The fighting was intense and brutal, with both sides suffering heavy losses. The Iranians eventually withdrew from the city, but at a high cost.</div>
+      </div>
+
+      <a class="prev" >&#10094;</a>
+      <a class="next">&#10095;</a>
+    
+
+      
+</div>
+
+<div class="arrow">
+    <a  href="index.html" >&#10094;</a>
+    <a  href="page3.html">&#10095;</a>
+</div>
+
+</div>
+
+
+<!-- slide show tutorial : https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+<script>
+    //onclick="plusSlides(-1)"
+    //onclick="plusSlides(1)"
+    let slideIndex =0;
+   showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  if(n < 0){
+    slideIndex = slides.length - 1;
+  } 
+
+  if(n > (slides.length - 1)) {
+    slideIndex = 0
+ };
+
+ for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex].style.display = "block";
+
+ 
+}
+const prev = document.getElementsByClassName("prev")[0];
+const next = document.getElementsByClassName("next")[0];
+const img1 = document.getElementById("img1");
+const img2 = document.getElementById("img2");
+const img3 = document.getElementById("img3");
+const text1 = document.getElementsByClassName("text")[0];
+const text2 = document.getElementsByClassName("text")[1];
+const text3 = document.getElementsByClassName("text")[2];
+
+prev.addEventListener("click",function(){
+    plusSlides(-1);
+})
+
+next.addEventListener("click",function(){
+    plusSlides(1);
+})
+
+
+
+text1.addEventListener("mouseover",function(){
+   text1.classList.toggle("showEmphasis");
+   img1.classList.toggle("darken");
+   
+});
+
+text2.addEventListener("mouseover",function(){
+   text2.classList.toggle("showEmphasis");
+   img2.classList.toggle("darken");
+   
+});
+
+text3.addEventListener("mouseover",function(){
+   text3.classList.toggle("showEmphasis");
+   img3.classList.toggle("darken");
+   
+});
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>
