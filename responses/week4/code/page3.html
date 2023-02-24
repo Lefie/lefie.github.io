@@ -7,37 +7,274 @@
 
 </head>
 <body>
+    <div class="topnav">
+      <div class="navItem">  <button class="navBtn"><a  href="index.html">Home</a></button></div>
+      <div class="navItem">  <button class="navBtn"><a  href="page2.html">Gallery</a></button></div>
+      <div class="navItem">  <button class="navBtn"><a  href="page4.html">Author</a></button></div>
+    </div>
+ <div class="biggerContainer">
+       
 
- <div class="superContainer">
-<div class="container">
+<div class="container-4 ">
+
+    <div class="quote1">
+    <p class="txt"> Daily I sit </p>
+    <p class="txt">with the language </p>
+    <p class="txt">they've made</p>
+
+    <p class="txt">of our language</p>
+
+    <p class="txt" >to <input type="text" name="blank1" id="blank1"> </input>  </p> 
+    <p class="txt">the <input type="text" name="blank2" id="blank2"> </input> of 
+        <input type="text" name="blank3" id="blank3"> </input> </p>
+    <p class="txt"> like you.</p>
+
+    </div>
+
+    <div class="quote2 hidden" >
+        <p class="txt"> You are what is referred to as </p>
+        <p class="txt">a "<input type="text" name="blank4" id="blank4"> </input> " Unclear whether </p>
+        <p class="txt">from a <input type="text" name="blank5" id="blank5"> </input> or </p>
+       <p class="txt"><input type="text" name="blank6" id="blank6"> </input>,unclear  </p>
+        <p class="txt">the final time you were addressed</p>
     
-    <div class="left-half">
-        <figure >
-            <img class="solmaz" src="https://radcliffe-harvard-edu.imgix.net/1b267c05-8c3f-499c-82e5-ccd7f776dc5d/20181022_solmaz-sharif_DSC_5799_radcliffe-KG.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=130%2C60%2C1304%2C1303"
-            alt="Image of Solmaz Shariff">
-        </figure>
+    </div>
+
+    <div class="quote3 hidden" >
+        <p class="txt"> the final time you were addressed </p>
+        <p class="txt">thou, beloved. It was for us a </p>
+        <p class="txt"> <input type="text" name="blank7" id="blank7"> </input>. </p>
+        <p class="txt">Just<input type="text" name="blank8" id="blank8"> </input> </p>
+        <p class="txt"> <input type="text" name="blank9" id="blank9"> </input></p>
+    
     </div>
 
 
-    <div class="right-half" >
-        <article>
-            <h2>Solmaz Sharif</h2>
-            <p>Solmaz Sharif is an Iranian-American poet, writer, and former United States Navy servicemember. She was born in Istanbul, Turkey in 1983, and later immigrated to the United States with her family. Sharif earned her MFA in poetry from the University of California, Berkeley and has since published several highly-acclaimed collections of poetry, including "Look" which was a finalist for the National Book Award in 2016.</p>
+</div>
 
-            <p>  In her work, Sharif explores themes related to war, violence, and the power of language. She often draws on her own experiences as a former Navy veteran, as well as her family's history as Iranian immigrants to the United States.</p> 
-                
-               <p> Sharif's writing has been featured in numerous publications and anthologies, including The New York Times, Poetry magazine, and The Best American Poetry. She has received many awards and honors for her work, including the Rona Jaffe Foundation Writers' Award and a fellowship from the National Endowment for the Arts.</p>
-        </article>
 
-    </div>
+<div id="btn">
+    <button id="submit">submit</button>
 
 </div>
 
 <div class="arrow">
-    <a href="page2.html" >&#10094;</a>
-    <a href="index.html">&#10095;</a>
+    <a class="arrows" href="page2.html" >&#10094;</a>
+    <a class="arrows"  href="page4.html">&#10095;</a>
 </div>
+
 </div>
+
+
+
+<script>
+     //blank1. neutralize
+    //blank2.capability
+    //blank3. low dollar value items
+    let score = 0;
+    
+    let currentInputLevel = 0;
+
+    const map = {
+        1: "neutralize",
+        2: "capability",
+        3: "low dollar value items",
+        4:"casualty",
+        5:"catalytic",
+        6:"frontal attack",
+        7:"catastrophic event",
+        8:"destroyed",
+        9:"died of wounds received in action"
+       
+    }
+
+    let btn = document.querySelector("#submit");
+
+    const getBlankVal = (num) =>{
+        return document.querySelector(`#blank${num}`).value.trim().toLowerCase();
+    }
+    const setBlankVal = (num, value) => {
+        document.querySelector(`#blank${num}`).value = value;
+    }
+
+    const getBlankEle = (num) =>{
+        return document.querySelector(`#blank${num}`);
+
+    }
+    
+    const getExpectedValue = (num) => {
+        return map[num];
+    }
+    
+    const createOrUpdateScoreDisplay = (num) => {
+        let scoreDisplay = document.querySelector("p.score");
+        if (!scoreDisplay) {
+            scoreDisplay = document.createElement("p");
+            scoreDisplay.classList.add("score");
+            document.getElementById("btn").appendChild(scoreDisplay);
+        }
+
+        scoreDisplay.innerHTML = `score: ${num}`;
+    }
+
+   
+
+    btn.addEventListener("click",(event)=>{
+        let blank1Val = getBlankVal(currentInputLevel + 1);
+        let blank2Val = getBlankVal(currentInputLevel + 2);
+        let blank3Val = getBlankVal(currentInputLevel + 3);
+
+        const blank1 = getBlankEle(currentInputLevel+1);
+        const blank2 = getBlankEle(currentInputLevel+2);
+        const blank3 = getBlankEle(currentInputLevel+3);
+
+        const blank1Expected = getExpectedValue(currentInputLevel + 1);
+        const blank2Expected = getExpectedValue(currentInputLevel + 2);
+        const blank3Expected = getExpectedValue(currentInputLevel + 3);
+
+        //retry mode : clean input values + remove error message 
+        if(event.target.innerHTML === "retry") {
+            if(blank1Val !== blank1Expected){
+                setBlankVal(currentInputLevel + 1, "");
+            }
+            if(blank2Val !== blank2Expected){
+                setBlankVal(currentInputLevel + 2, "");
+            }
+            if(blank3Val !== blank3Expected){
+                setBlankVal(currentInputLevel + 3, "");
+            }
+         
+            event.target.innerHTML = "submit";
+
+            const errorMsg = document.querySelector("p.error");
+            blank1.style.color = "black";
+            blank1.style.backgroundColor = "rgba(255, 255, 0, 0.429)";
+            blank2.style.color = "black";
+            blank2.style.backgroundColor = "rgba(255, 255, 0, 0.429)";
+            blank3.style.color = "black";
+            blank3.style.backgroundColor = "rgba(255, 255, 0, 0.429)";
+            
+            if(errorMsg){
+                errorMsg.remove();
+            }
+
+            createOrUpdateScoreDisplay(score);
+          
+            return;
+        }
+
+        //continue to next level
+        if(event.target.innerHTML === "continue"){
+            // console.log("current input level + current score",currentInputLevel,score);
+            let quoteNum;
+            if(currentInputLevel === 3){
+                quoteNum = 1;
+            }else if(currentInputLevel == 6){
+                quoteNum = 2;
+            }
+
+            const curLevel = document.querySelector(`.quote${quoteNum}`);
+            const nextLevel= document.querySelector(`.quote${quoteNum+1}`);
+            curLevel.classList.add("hidden");
+            nextLevel.classList.remove("hidden");
+
+            event.target.innerHTML = "submit";
+
+            return;
+            
+
+        }
+       
+
+        // If any field is not filled, display a red message to remind users to fill all fields
+        if(!blank1Val || !blank2Val || !blank3Val) {
+            //create an error message text node
+            const errorMsg = document.createElement("p");
+            errorMsg.innerHTML = "Please fill in all the blanks";
+            errorMsg.classList.add("error");
+            errorMsg.style.color="red";
+            document.getElementById("btn").appendChild(errorMsg);
+            event.target.innerHTML = "retry";
+            return;
+        } 
+
+        // Handle the correct case : all blanks are correct
+        if(blank1Val === blank1Expected && blank2Val === blank2Expected && blank3Val === blank3Expected ){
+            score+=3;
+            currentInputLevel+=3;
+            createOrUpdateScoreDisplay(score);
+            if(score === 9){
+                event.target.style.display = "none";
+               const msg =  document.createElement("p");
+               msg.classList.add("congrats");
+               msg.innerHTML = "Congrats! you re done. Refresh to restart ";
+              
+               document.getElementById("btn").appendChild(msg);
+               return;
+
+            }
+
+            event.target.innerHTML = "continue";
+            
+            
+
+        
+
+            return;
+        }
+
+        // console.log(
+        //     blank1Val,
+        //     blank2Val,
+        //     blank3Val,
+        // )
+        // console.log(
+        //     blank1Expected,
+        //     blank2Expected,
+        //     blank3Expected,
+        // )
+        // console.log(
+        //     blank1,blank2,blank3
+
+
+        // )
+
+        
+        // partial correctness, handle score
+       let scoreToAdd=0;
+        if(blank1Val !== blank1Expected){
+            blank1.style.backgroundColor = "DarkSalmon";
+            
+        }else{
+            scoreToAdd+=1;
+        }
+
+        if(blank2Val !== blank2Expected){
+            blank2.style.backgroundColor = "DarkSalmon";
+        }else{
+            scoreToAdd +=1;
+        }
+
+        if(blank3Val !== blank3Expected){
+            blank3.style.backgroundColor = "DarkSalmon";
+        }else{
+            scoreToAdd+=1;
+        }
+
+
+        // console.log(score)
+        event.target.innerHTML = "retry";
+     
+        createOrUpdateScoreDisplay(score+scoreToAdd);
+    
+        return;
+ 
+        });
+
+    
+   
+</script>
+   
    
 </body>
 
