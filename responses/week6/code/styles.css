@@ -1,0 +1,114 @@
+/*
+stars tutorial : https://www.youtube.com/watch?v=wuUSVEcK-kM
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*  padding and border are included in the width and height: */
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#000215, #1a1b51);
+}
+
+.container {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.stars {
+  position: absolute;
+  display: flex;
+}
+
+.stars span {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin: 0 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #fff7f73e, 0 0 50px #fcfbfb, 0 0 100px #dbefee;
+  animation: animate 10s linear infinite;
+  animation-duration: calc(250s / var(--i));
+}
+
+.stars span:nth-child(2n + 1) {
+  background: skyblue;
+  box-shadow: 0 0 0 5px #f6fbff2b, 0 0 50px #adf1ff, 0 0 100px #c6e7fe;
+}
+
+/* .stars span:nth-child(2n + 4){
+    background:rgb(255, 234, 0);
+    box-shadow: 0 0 0 5px #f6fbff2b,
+    0 0 50px #f5fc6b,
+    0 0 100px #ffe77b;
+
+} */
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(0vh) scale(1);
+  }
+}
+
+
+p {
+ 
+  font-size: 2em;
+  max-width: 50%;
+  font-family: 'Tilt Warp', cursive;
+  color:rgb(0, 0, 0);
+  animation: glow 1s ease-in-out infinite alternate;
+ 
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fcf78b, 0 0 20px #ffe838, 0 0 10px #eff65d, 0 0 10px #f6af36, 0 0 50px #f9f33b, 0 0 10px #e6c400, 0 0 10px #f9f33b;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ffed4d, 0 0 20px #ffa94d, 0 0 20px #f9f33b, 0 0 20px #f9f33b, 0 0 20px #f9f33b, 0 0 20px #f9f33b;
+    }
+  }
+
+.image{
+    margin-top:150px;
+ 
+}
+
+
+
+img{
+    
+    display: block;
+    height:300px;
+    width: 250px;
+    animation: upAndDown 10s linear infinite;
+}
+
+@keyframes upAndDown {
+    0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-100px);
+      }
+}
