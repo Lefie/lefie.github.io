@@ -38,13 +38,19 @@ body {
   position: relative;
   width: 10px;
   height: 10px;
-  background: white;
+  background-color: rgb(255, 255, 255);
   margin: 0 8px;
   border-radius: 50%;
   box-shadow: 0 0 0 5px #fff7f73e, 0 0 50px #fcfbfb, 0 0 100px #dbefee;
   animation: animate 10s linear infinite;
   animation-duration: calc(250s / var(--i));
 }
+
+
+
+
+
+
 
 .stars span:nth-child(2n + 1) {
   background: skyblue;
@@ -89,10 +95,14 @@ p {
     }
   }
 
+
+
 .image{
     margin-top:150px;
  
 }
+
+
 
 
 
@@ -112,3 +122,5 @@ img{
         transform: translateY(-100px);
       }
 }
+
+

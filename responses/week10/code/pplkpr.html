@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>What is PPLKPR</title>
+</head>
+<body>
+    <a href="index.html">
+        <div class="header">
+          <div class="title">
+            <h1>PPLKPR</h1>
+            <img id="pplkpr" src="../img/pplkpr.jpeg" />
+          </div></div
+      ></a>
+
+    <div class="container-pplkpr">
+        <!--  card : flip cards -->
+
+        <div class="cards"> 
+            <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h2>What is pplkpr?</h2>
+              </div>
+              <div class="flip-card-back">
+                <h1>it is both a real app and an art project.</h1> 
+                <p>pplkpr is an ios app that you can install on your phone. </p> 
+                <p>It also requires the use of a smartwatch to monitor your emotional / physical response to people around you
+                </p>
+              </div>
+            </div>
+          </div>
+          <br/>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h2>What is the goal pplkpr as an ios app?</h2>
+              </div>
+              <div class="flip-card-back">
+             
+                <p>the goal of the app is to collect data based on your response to the people you interact with. It then analyzes the data and makes decisions on who you should and should not be hanging out with . </p> 
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <br/>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h2>What is the goal pplkpr as an art project?</h2>
+              </div>
+              <div class="flip-card-back">
+             
+                <p>the art project is meant to examine the implications of quantified living for relationships </p> 
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <br/>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h2>What are technologies that are involved ? </h2>
+              </div>
+              <div class="flip-card-back">
+             
+                <p> GPS and a heart rate wristband. GPS to track if where you are coming and going.  Heart rate wristband tracks if you have a change of emotional state </p> 
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <br/>
+        </div>
+      
+
+        <div class="container-2">
+
+            <div class="name">How it works</div>
+        
+            <div class="mySlides fade">
+               
+                <img id="img1" src="../img/product.png" alt="image1" style="width:500px;height:650px">
+                <div id="one" class="text"> step1 : You have put on the wristband and installed apps
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img id="img2" src="../img/notify.png" alt="image2" style="width:500px;height:750px">
+                <div class="text"> step2: PPLKPR sends you a notification when it detects a change of location or heart rate </div>
+              </div>
+            
+              <div class="mySlides fade">
+                <img id="img3" src="../img/report.png" alt="image2" style="width:500px;height:750px">
+                <div class="text">step3 : You fill out a report including info such as who you were with, how they made you feel etc and PPLKPR analyzes the data</div>
+              </div>
+
+              <div class="mySlides fade">
+                <img id="img4" src="../img/analysis.png" alt="image2" style="width:500px;height:750px">
+                <div class="text">step4 : pplkpr gives you a breakdown of who's affecting you positively and negatively</div>
+              </div>
+
+              <div class="mySlides fade">
+                <img id="img5" src="../img/act.png" alt="image2" style="width:500px;height:750px">
+                <div class="text"> step5 : acts on your behalf to invite people to hang out / send messages / block / delete contacts</div>
+              </div>
+
+
+        
+              <a class="prev" >&#10094;</a>
+              <a class="next">&#10095;</a>
+            
+        
+              
+        </div>
+
+        <script>
+            //onclick="plusSlides(-1)"
+            //onclick="plusSlides(1)"
+            let slideIndex =0;
+           showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+        
+          if(n < 0){
+            slideIndex = slides.length - 1;
+          } 
+        
+          if(n > (slides.length - 1)) {
+            slideIndex = 0
+         };
+        
+         for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex].style.display = "block";
+        
+         
+        }
+        const prev = document.getElementsByClassName("prev")[0];
+        const next = document.getElementsByClassName("next")[0];
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+        const img3 = document.getElementById("img3");
+        const img4 = document.getElementById("img4");
+        const img5 = document.getElementById("img5");
+        const text1 = document.getElementsByClassName("text")[0];
+        const text2 = document.getElementsByClassName("text")[1];
+        const text3 = document.getElementsByClassName("text")[2];
+        const text4 = document.getElementsByClassName("text")[3];
+        const text5 = document.getElementsByClassName("text")[4];
+        
+        prev.addEventListener("click",function(){
+            plusSlides(-1);
+        })
+        
+        next.addEventListener("click",function(){
+            plusSlides(1);
+        })
+        
+        
+        
+        text1.addEventListener("mouseover",function(){
+           text1.classList.toggle("showEmphasis");
+           img1.classList.toggle("darken");
+           
+        });
+        
+        text2.addEventListener("mouseover",function(){
+           text2.classList.toggle("showEmphasis");
+           img2.classList.toggle("darken");
+           
+        });
+        
+        text3.addEventListener("mouseover",function(){
+           text3.classList.toggle("showEmphasis");
+           img3.classList.toggle("darken");
+           
+        });
+
+        text4.addEventListener("mouseover",function(){
+           text4.classList.toggle("showEmphasis");
+           img4.classList.toggle("darken");
+           
+        });
+        text5.addEventListener("mouseover",function(){
+           text5.classList.toggle("showEmphasis");
+           img5.classList.toggle("darken");
+           
+        });
+        </script>
+
+       
+
+        
+
+       
+
+       
+           
+
+        </div>
+
+
+
+
+
+
+       
+        
+
+    </div>
+
+
+
+    
+</body>
+</html>
