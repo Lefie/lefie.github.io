@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new-styles.css" />
+    <title>Ethical Questions</title>
+</head>
+<body>
+    <a href="index.html">
+        <div class="header">
+          <div class="title">
+            <h1>PPLKPR</h1>
+            <img id="pplkpr" src="../img/pplkpr.jpeg" />
+          </div></div
+      ></a>
+
+    <!-- discussion : random convo generator -->
+    <div class="container-qs">
+
+      <div class="card">
+        <div class="card-container">
+          <h1><b>Discussion Questions</b></h1>
+        
+        </div>
+      </div>
+
+   
+
+      <button class="btn">Show me a question </button>
+
+
+    </div>
+
+    <script>
+
+      function createP(idNum,txt){
+        const id = "q" + idNum
+        let p = document.createElement("p");
+      
+        p.setAttribute("id",id);
+       p.setAttribute("class","qs");
+       let pTxt = document.createTextNode(txt);
+     
+       p.appendChild(pTxt);
+       return p
+        
+      }
+
+      const q1 = "In the tech descriptions, it says the data is private to the user. Who owns the data shared between two users and how can that data be misused ?"
+      const q2 = "what if the app understands relationships better and makes better interpersonal choices than we can ourselves ?"
+      const q3 = "How can this app affect our relationships at school / work ? "
+      const q4 = " Can you think of some reasons why it may be valuable to spend time with people that make you feel uncomfortable?"
+      const q5 = "Can we change any feature of this app to make it less dystopian ?"
+
+      const pNode1 = createP(1,q1);
+      const pNode2 = createP(2,q2);
+      const pNode3 = createP(3,q3);
+      const pNode4 = createP(4,q4);
+      const pNode5 = createP(5,q5);
+
+      let arr = [];
+      arr.push(pNode1);
+      arr.push(pNode2);
+      arr.push(pNode3);
+      arr.push(pNode4);
+      arr.push(pNode5);
+     
+
+     
+      
+
+     const btn = document.getElementsByClassName("btn").item(0);
+     btn.addEventListener("click",(array)=>{
+      const parent = document.getElementsByClassName("card-container");
+      console.log(parent.item(0).children);
+      let childEle = parent.item(0).children.item(0);
+      
+
+      if(childEle){
+        childEle.remove();
+       }
+
+       console.log("test",arr)
+     
+   
+      let indx = Math.floor(Math.random()*arr.length)
+      
+     
+      const randomItem = arr[indx]
+      console.log(randomItem);
+      
+     parent.item(0).appendChild(randomItem);
+      
+
+     });
+
+
+
+      /*
+      -> on click the button
+      -> check if there are elements - if so remove
+      -> store qs a list
+      -> randomly choose a question
+      -> display the question
+      */
+
+
+      
+    </script>
+    
+</body>
+</html>
