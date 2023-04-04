@@ -393,6 +393,9 @@ font-size :1.9em;
   border-radius: 1px;
   padding: 30px;
   margin: 10px 0;
+  font-size:1.3em;
+  font-family: "Source Sans Pro", sans-serif;
+
 }
 
 .darker {
