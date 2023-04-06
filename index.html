@@ -1,21 +1,97 @@
 <!DOCTYPE html>
 
-<html>
-<head>
-<title>Lemon's Page</title>
-
-
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="mainStyles.css" />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <title>Lemon's page</title>
+      </head>
 <body>
 
-<h1> Hiya. I am Lemon </h1>
+  <div class="header">
+    <div class="title">
+      <h1  style="font-size:3em;"> <i class="fa-solid fa-lemon"></i>'s Space</h1>
+      &nbsp; &nbsp;&nbsp;
+    </div>
+  </div>
 
-<p><a href="webDevAssignments.html">Web Dev Homework</a></p>
+  <div class="container-intro">
 
-<hr>
+    <div class="card">
+      <img id="profile" src="img/lemon.png" alt="lemon profile pic">
+      <h2>Lemon Ruan</h2>
+      <p>New York University</p>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      
+    </div>
+    <div class="typewriter">
+      <p id="greeting" >Hi 👋 I am Lemon, a CS student at NYU</p>
+    </div>
+  
+  </div>
+
+  <div class="projects"> Course Projects</div>
+
+
+
+  <div class="timeline">
+    <div class="container left">
+      <div class="date">Spring 2023</div>
+      <i class="icon fa-solid fa-code"></i>
+      <div class="content">
+        <h2>Intro to Web Development</h2>
+       
+        <a href="webDevAssignments.html"target="_blank">Web Dev Homework</a>
+        <p class="description">
+         A series of client side coding assignments completed in Intro to Web Development course using html,css and javascript. 
+        </p>
+
+        
+        
+      </div>
+    </div>
+    <div class="container right">
+      <div class="date">Fall 2022</div>
+      
+      <i class="icon fa-solid fa-fish"></i>
+      <div class="content">
+        <h2>Collaborating Remotely: Build Software from Anywhere</h2>
+        <a href="https://ekko-frontend.herokuapp.com/"target="_blank">EKKO</a>
+        <p class="description">
+         EKKO is a MERN stack web app created to encourage users to build connections with others by exchanging different perspectives.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="date">Fall 2022</div>
+      <i class="icon fa-solid fa-cross"></i>
+      <div class="content">
+        <h2>Applied Internet Technology</h2>
+        <a href="http://gatherinfaith-frontend.herokuapp.com/" target="_blank">Gather In Faith</a>
+        <p class="description">
+          Gather In Faith is a MERN stack web app created to manage events for Christian clubs on college campuses.
+        </p>
+      </div>
+    </div>
+
+
+   
+  
+   
+  </div>
+
+ 
 
 
 
 
+
+
+<script src="https://kit.fontawesome.com/466740fcce.js" crossorigin="anonymous"></script>
 </body>
 </html>

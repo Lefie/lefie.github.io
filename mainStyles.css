@@ -1,0 +1,353 @@
+
+*{
+    
+    margin:0;
+    padding: 0; 
+    border:0;
+   
+}
+
+/* background-color: #e2ded1; */
+
+body{
+    
+    background-color: rgba(241,239,233,255);
+}
+
+
+#profile{
+    border: 5px solid #342002;;
+}
+
+.header{
+    margin-top:30px;
+}
+
+
+
+.container-intro{
+
+    max-width: 100%;
+    
+    margin-top:30px;
+    display: flex;
+    background-color: #e2ded1;;
+    border: 10px solid rgb(93, 76, 28);
+    justify-content: space-evenly;
+    align-items:center ;
+    font-size:2em;
+    padding:30px;
+    line-height: 1.9em;
+
+}
+
+a {
+    text-decoration: none;
+   
+    color: black;
+  }
+
+ a:hover {
+    color:orange;
+    opacity: 0.7;
+    transition: 0.8s;
+  }
+  a:active{
+    color:yellowgreen;
+  }
+
+.container-intro img{
+    max-width: 250px;
+    border-radius: 100%;
+    
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+
+.card {
+    
+    padding:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+   background-color: rgba(255, 255, 255, 0.251);
+  
+    text-align: center;
+   
+  }
+
+  .card:hover {
+   
+   background-color: rgba(255, 255, 255, 0.76);
+   transition:0.6s;
+  
+
+  }
+
+  .typewriter p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0); }
+  }
+
+  .timeline{
+    margin-top: 50px;
+  }
+
+  .projects{
+   margin-top: 50px;
+   margin-bottom: 50px;
+   text-align: center;
+  
+   font-size:3em;
+   font-weight: 400;
+  }
+
+  .timeline {
+    
+    position: relative;
+   
+    width:100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+   
+  }
+
+  .timeline::after {
+    /* border:solid 2px rgb(0, 121, 32); */
+    content: '';
+    position: absolute;
+    width: 5px;
+    background: #342002;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: 0px;
+  }
+
+  .container {
+    padding: 20px 25px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+  }
+
+  .container.left {
+    left: 0;
+  }
+  
+  .container.right {
+    left: 50%;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: 38px;
+    background:#e2ded1;
+    border: 2px solid #342002;
+    border-radius: 16px;
+    z-index: 1;
+  }
+
+
+.container.right::after {
+    left: -7px;
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 50px;
+    background: #342002;
+    z-index: 1;
+  }
+
+  /* line on icon(right) */
+  .container.right::before {
+    left: 8px;
+  }
+  
+  .container .date {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 10px);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #342002;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+  }
+
+
+.container.left .date {
+    right: -125px;
+  }
+  
+  .container.right .date {
+    left: -135px;
+  }
+  
+  .container .icon {
+    position: absolute;
+    display: inline-block;
+    width: 42px;
+    height: 25px;
+    padding: 9px 0;
+    top: calc(50% - 20px);
+    background-color: rgba(241,239,233,255);
+    border: 2px solid #342002;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    color:#342002;
+    z-index: 1;
+  }
+  
+  .container.left .icon {
+    right: 88px;
+  }
+  
+  .container.right .icon {
+    left: 56px;
+  }
+
+  .container .content {
+    /* border: 3px solid brown; */
+    padding: 80px 70px 100px 90px;
+    background-color: #e2ded1;
+    position: relative;
+    height:250px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+  }
+
+ 
+
+  .container .content a{
+    
+    color:rgb(255, 243, 223);
+    background-color:#342002;
+    font-size:1.3em;
+    font-weight: bold;
+    text-align: center;
+    padding:10px;
+  }
+
+ 
+
+  .container .content .description{
+    margin-top:8px;
+   font-size:1.4em;
+   line-height:1em;
+   color: #342002;
+   font-weight: 400;
+  }
+
+
+
+.container.right .content {
+    padding: 80px 70px 100px 90px;
+    margin-left:50px;
+   
+   
+  }
+  
+  .container .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    font-weight: normal;
+    color: #342002;
+    font-weight: bolder;
+   
+  }
+
+  .springSemester{
+    margin-top: 50px;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+  justify-items: center;
+  align-items: center;
+
+  }
+
+  .weekly{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #342002;
+    border-radius: 40px;
+    background-color: #e2ded1;
+    height:200px;
+    width: 200px;
+    font-size:1.5em;
+    padding:15px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    
+    
+  }
+
+  .weekly:hover{
+    color:rgb(51, 20, 20);
+    opacity: 0.8;
+    height:250px;
+    width:250px;
+    transition:0.5s;
+  }
+  
+ 
+
+  
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
