@@ -31,6 +31,7 @@
 #pplkpr {
   height: 90px;
   
+ 
 }
 .title {
   display: flex;
@@ -374,10 +375,10 @@ a:active {
 .showEmphasis{
   background-color: black;
 color : rgb(255, 251, 251);
-transform: translate(50%,-90%);
+transform: translate(50%,-120%);
 max-width: 50%;
 transition:0.8s;
-font-size :1.3em;
+font-size :1.9em;
 
 }
 
@@ -502,7 +503,6 @@ font-size :1.3em;
 .qs{
   font-family: "Source Sans Pro", sans-serif;
 }
-
 
 @media (min-width: 320px) and (max-width: 480px) {
   

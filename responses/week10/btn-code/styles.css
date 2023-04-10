@@ -1,0 +1,47 @@
+
+body{
+   
+    background-color: rgb(238, 176, 238);
+    height:1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+  
+    
+}
+
+#what{
+    border: 2px solid red;
+}
+
+#unique{
+    width: 200px;
+    height:180px;
+}
+
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    height:150px;
+    row-gap: 30px;
+}
+
+.btn-size{
+    height:40px;
+    width:60px;
+}
+
+#controls{
+    background-color: rgba(0, 157, 255, 0.699);
+    padding:40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
