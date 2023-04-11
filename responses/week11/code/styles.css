@@ -48,10 +48,13 @@ body {
 
 .mouth {
   margin-top: 15px;
-  border: 1px solid salmon;
-  background-color: salmon;
+  border: 3px solid salmon;
+  height:3vh;
+  width:3vh;
+  border-radius: 50%;
+  /* background-color: salmon;
   height: 0.5vh;
-  width: 20px;
+  width: 20px; */
 }
 
 #main {
