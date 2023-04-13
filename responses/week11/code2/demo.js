@@ -158,8 +158,8 @@ choice2.addEventListener("change", (event) => {
   }
 
   match(event.target.value, "wheel", "#c2", image4, image5, image6, image4);
-  match(event.target.value, "bike", "#c2", image4, image5, image6, image5);
-  match(event.target.value, "scooter", "#c2", image4, image5, image6, image6);
+  match(event.target.value, "bike", "#c2", image4, image5, image6, image6);
+  match(event.target.value, "scooter", "#c2", image4, image5, image6, image5);
 });
 
 choice3.addEventListener("change", (event) => {
