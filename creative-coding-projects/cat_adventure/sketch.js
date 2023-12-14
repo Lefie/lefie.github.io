@@ -181,13 +181,14 @@ function draw() {
   //text("cat pos x : " + cat.x + " cat pos y: " + cat.y, 15,15)
   score = mg1.points + mg2.points + mg3.points + mg4.points
   text("score: "+score, 100,50)
-  text("If you have a score > 30, press 'c' ",350,70)
-  text("If you have a score > 60, press 'b' ",350,90)
-  text("If you have a score > 90, press 'a' ",350,110)
+  
 
   if (gameState === 0) {
     // the default map
     console.log("got here");
+    text("If you have a score > 30, press 'c' ",350,70)
+    text("If you have a score > 60, press 'b' ",350,90)
+    text("If you have a score > 90, press 'a' ",350,110)
 
     mg1.display();
     mg2.display();
@@ -730,20 +731,20 @@ class Mouse {
     }
   
     //line(mouseX, mouseY, this.x, this.y);
-    ellipse(mouseX ,mouseY,10,10)
+    //ellipse(mouseX ,mouseY,10,10)
     fill("pink")
-    ellipse(this.x +15,this.y +15,20,20)
+    ellipse(this.x ,this.y ,20,20)
     
     
     fill("black")
     let dis = dist(mouseX, mouseY, this.x + 15, this.y + 15);
-    text(dis,100,100)
+    //text(dis,100,100)
     textSize(50)
     text("clicks: " + clicks, 50, 60);
 
     if(dis < 20 ){
       fill("green")
-      ellipse(this.x + 15,this.y + 15,20,20)
+      ellipse(this.x ,this.y ,20,20)
     }
     
     if(dis < 20 && mouseIsPressed && !clicked){
