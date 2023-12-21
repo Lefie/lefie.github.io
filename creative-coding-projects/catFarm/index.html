@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- load in the p5 core library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+
+    <!-- load in the p5 sound library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js"></script>
+
+
+
+    <!-- your custom sketch code -->
+    <script src="sketch.js"></script>
+    <script src="class/cat.js"></script>
+    <script src="class/sprite.js"></script>
+    <script src="class/price.js"></script>
+
+
+    <!-- custom CSS styles for this page -->
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        body{
+            margin-top:150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:#ac8c54;
+            display:flex;
+            flex-direction: column;
+            font-family: 'Comic Neue', cursive;
+
+        }
+        h2{
+          text-align: center;
+        }
+
+        p{
+          text-align: left;
+          margin:auto;
+          width:50%;
+        }
+        
+
+       
+
+    </style>
+
+  </head>
+  <body>
+    <div id="container">
+
+
+    </div>
+    <div id="content">
+      <h2>Welcome to the Cat Farm!</h2>
+
+    <p>This is a productivity game that encourages users to have focused work/study sessions. If you successfully complete a study/work session, you can earn points and purchase other farm animals for your farm!</p>
+      <br/>
+    <p>To start, go to the study station (the house on the right) to begin your very first focus session!</p>
+    <br/>
+    <p>Once there, go to the green square in the middle. You will be prompted to enter the duration for how long you'd like to study. Enter a number (in minutes!). Once you set the duration, go to the square where it says "start" to start the timer. During the timer, you must commit to finishing the focus session to earn points. Leaving the square before the focus session ends will break the session and result in earning 0 points.</p>
+    <br/>
+    <p>Once you finish the focus session, exit by going all the way to the right.</p>
+    <br/>
+    <p>Once you have earned a minimum of 10 points, you can go to the marketplace to purchase a farm animal.</p>
+
+    </div>
+  </body>
+</html>
