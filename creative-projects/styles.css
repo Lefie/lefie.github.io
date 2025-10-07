@@ -1,0 +1,41 @@
+
+
+body{
+    background-color: rgba(241,239,233,255);
+    color:#342002;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+a:hover {
+color:orange;
+opacity: 0.7;
+transition: 0.8s;
+}
+
+a:active{
+color:yellowgreen;
+}
+
+a {
+    text-decoration: none;
+    color:#342002;
+}
+
+.creative-list li {
+    display: inline-block;
+    padding:5px 20px;
+    background-color:#342002;
+    color:rgb(255, 243, 223);
+    transition: 1.2s;
+    cursor:pointer;
+}
+
+.creative-list li:hover {
+    background-color:#342002cc;
+    color:rgb(255, 243, 223);
+}
+
