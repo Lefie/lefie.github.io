@@ -1,0 +1,128 @@
+
+body {
+    background-color: rgb(254, 222, 227);
+    min-height:100vh;
+    color:#f26d85;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+}
+
+.rosary-img {
+    display: block;
+    width:200px;
+}
+
+.mysteries {
+    background-color: #ffc0cbfa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:1em;
+    row-gap: 1em;
+    width:100%;
+    margin-top:2em;
+    margin-bottom: 2em;
+    padding:1em;
+    overflow: hidden;
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+}
+
+article {
+    margin:0 5em;
+    background-color: #fff2f4;
+    padding:1.5rem;
+    border-radius: 15px;
+}
+
+article h2 {
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-size:2em;
+}
+
+article p {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    display: inline-block;    
+}
+
+.joyful {
+    background-color: #f9cb34;
+    color:#fff3d5;
+    transform: translateX(-150%);
+}
+
+.joyful p {
+    color: #f9cb34;
+    background-color:#fff3d5;
+    padding-left:0.5em;
+    padding-right:0.5em;
+   
+}
+
+.sorrowful {
+    background-color: #234C6A;
+    color:#82c9ff;
+    transform: translateX(150%);
+}
+
+.sorrowful p {
+    color: #234C6A;
+    background-color:#82c9ff;
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
+
+.luminous {
+    background-color: #fbfbfb;
+    color:#FFDA77;
+    transform: translateX(-150%);
+}
+
+.luminous p{
+    color: #fbfbfb;
+    background-color:#FFDA77;
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
+.glorious {
+    background-color: #FA812F;
+    color:#faf257;
+    transform: translateX(150%);
+}
+
+.glorious p{
+    color: #FA812F;
+    background-color:#faf257;
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
+.text-container {
+    overflow: hidden;
+    max-width: 500px;
+    margin-left:3em;
+    font-family: "Noto Sans Mono", monospace;
+    font-size:0.8rem;
+}
+
+.explanation1,.explanation2{
+   /* opacity: 0; */
+   transform: translateX(-100%);
+}
+
