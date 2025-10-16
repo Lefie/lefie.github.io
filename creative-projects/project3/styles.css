@@ -1,0 +1,150 @@
+
+body {
+    margin:0;
+    background-color: rgb(255, 255, 255);
+}
+
+.start,.fin {
+    background-color: lightblue;
+}
+
+.start,.middle,.fin {
+    height:100vh;
+}
+
+.start {
+   background: url('./imgs/mary.jpg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.fin {
+    background: url('./imgs/rose.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.h1-mask {
+    /* border:1px solid blue; */
+    padding:0;
+    text-align: center;
+    overflow: hidden;
+    margin-top:5em;
+}
+
+h1 {
+   font-size:2.5rem;
+   font-family: "Fredericka the Great", serif;
+   text-align: center;
+   /* border:1px solid skyblue; */
+   display: inline-block;
+   margin:0;
+   
+}
+
+.galleries {
+    display: flex;
+    flex-direction: row;
+    gap:1.2em;
+    align-items: center;
+    justify-content: center;
+    margin-top:5em;
+}
+
+.mask {
+    border:5px solid rgb(45, 23, 1);
+    height:300px;
+    width:180px;
+    overflow: hidden;
+}
+
+.imgs {
+    max-height:300px;
+}
+
+#little-flower-img {
+    transform: translateX(-150px);
+}
+
+#carlo-img {
+    transform: translateX(-25px);
+}
+
+#faustina-img {
+    height:310px;
+}
+
+#teresa-avila-img {
+    transform: translateX(-150px);
+}
+
+#st-margaret-img {
+    transform: translateX(-180px);
+}
+
+.img-set {
+    font-family: "Poiret One", sans-serif; 
+    position:relative;
+}
+
+.line {
+    width:150px;
+    height:3px;
+    background-color: black;
+    display: inline-block;
+    margin-right:5px;
+    transform: translateY(-3px);
+}
+
+span {
+    display: inline-block;
+    width:30px;
+    text-align: right;
+    margin-top:1px;
+    
+}
+
+.text-mask {
+    /* border:1px solid blue; */
+    overflow: hidden;
+    height:30px;
+}
+
+.btn{
+    position:absolute;
+    top:50%;
+    left:25%;
+    opacity:0;
+    background-color: white;
+    border:none;
+    height:25px;
+    font-family: "Poiret One", sans-serif; 
+    transition: ease-in-out .2s;
+}
+
+.btn:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.btn:active {
+    background-color: rgb(255, 255, 255);
+}
+
+.btn a{
+    color:black;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    color:black;
+}
+
+.btn a:active{
+    color:black;
+}
+
+
